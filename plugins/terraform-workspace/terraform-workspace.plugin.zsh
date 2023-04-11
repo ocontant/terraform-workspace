@@ -32,6 +32,8 @@ autoload -Uz add-zsh-hook
 add-zsh-hook chpwd __update_terraform_workspace_prompt
 add-zsh-hook precmd __update_terraform_workspace_prompt
 
+
+
 # If you notice, aliases are bounded to each other
 # Why? Gives the freedom to override the lower levels and to affect all of them
 # e.g.: alias tfi=terraform init -no-color -reconfigure
@@ -57,20 +59,24 @@ alias tfd!='tfd -auto-approve'
 alias tfid!='tfi && tfd!'
 
 alias tfc='tf console'
+alias tff='tf fmt'
 alias tfg='tf graph'
-alias tfc='tf console'
 alias tfget='tf get'
 alias tfimp='tf import'
 alias tfo='tf output'
 alias tfprov='tf providers'
-alias tfpp='tf push'
+alias tfp='tf push'
 alias tfr='tf refresh'
 alias tfs='tf show'
 alias tfst='tf state'
 alias tft='tf taint'
-alias tfunt='tf untaint'
+alias tfu='tf untaint'
 alias tfv='tf validate'
 alias tfver='tf version'
 alias tfw='tf workspace'
+alias tfwn='tfw new'
+alias tfwl='tfw list'
+alias tfws='tfw show'
+alias tfwse='tfw select'
 
 complete -o nospace -C $(which terraform) terraform
