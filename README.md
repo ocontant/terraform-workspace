@@ -10,14 +10,22 @@ and the ability to plan and apply changes, making it easier to manage and provis
 - Support for agnoster template
 
 ## Structure:
-`.
+```sh
+.
 ├── README.md
 ├── plugins
 │   ├── _terraform
 │   └── terraform-workspace.plugin.zsh
 └── themes
     └── agnoster.zsh-theme
-`
+```
+
+## Requirements
+* [zsh](http://www.zsh.org/)
+* [Terraform](https://terraform.io/)
+* [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+* [terraform-workspace plugin](https://github.com/ocontant/terraform-workspace)
+* [terraform-workspace themes](https://github.com/ocontant/terraform-agnoster)
 
 # Installation:
 ## Manual
@@ -82,13 +90,6 @@ ZSH_THEME_TF_PROMPT_SUFFIX="%{$reset_color%}"
 ## Example:
 PROMPT="${PROMPT}>${ZSH_THEME_TF_PROMPT_PREFIX-[}${__TERRAFORM_WORKSPACE_CACHE:gs/%/%%}${ZSH_THEME_TF_PROMPT_SUFFIX-]}"
 ```
-
-## Requirements
-* [zsh](http://www.zsh.org/)
-* [Terraform](https://terraform.io/)
-* [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
-
-
 # Aliases
 
 | Alias | Command              |
